@@ -1,0 +1,25 @@
+server:
+  port: 8000
+
+spring:
+  redis:
+    host: localhost
+  cache:
+    type: redis
+      
+  session:
+    store-type: redis
+
+  security:
+    sessions: ALWAYS
+
+logging:
+  level:
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+    com.test: DEBUG
+  file: app.log
+
+services:
+  user-service-url: http://localhost:8001
+
